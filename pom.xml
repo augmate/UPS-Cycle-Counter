@@ -22,6 +22,13 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.robolectric</groupId>
+            <artifactId>robolectric</artifactId>
+            <version>2.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
             <version>${platform.version}</version>

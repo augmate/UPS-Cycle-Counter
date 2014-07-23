@@ -1,15 +1,18 @@
 package com.augmate;
 
+import android.content.Intent;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
 
-@RunWith(JUnit4.class)
+@Config(emulateSdk = 18)
+@RunWith(RobolectricTestRunner.class)
 public class HelloAndroidActivityTest {
 
     @Test
     public void should() {
-
+        Intent intent = new Intent();
     }
 
 }
