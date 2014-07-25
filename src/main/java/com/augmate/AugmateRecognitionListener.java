@@ -10,6 +10,11 @@ import java.util.ArrayList;
 public class AugmateRecognitionListener implements RecognitionListener{
 
     private static final String TAG = "com.augmate.ups.cycle.voice";
+    private final IAudioDoneCallback myCallback;
+
+    AugmateRecognitionListener(IAudioDoneCallback iAudioDoneCallback){
+        myCallback = iAudioDoneCallback;
+    }
 
     @Override
     public void onReadyForSpeech(Bundle params) {
@@ -47,6 +52,7 @@ public class AugmateRecognitionListener implements RecognitionListener{
         for (String str : stringArrayList) {
             Log.d(TAG, "result=" + str);
         }
+        myCallback.onSuccess(stringArrayList);
 
     }
 
